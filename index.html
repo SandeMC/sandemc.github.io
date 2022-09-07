@@ -3,8 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-text {
+.font {
   font-family: 'Lato', sans-serif;
+}
+.text {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #fc6a08
 }
 img {
   border-radius: 50%;
@@ -13,15 +18,84 @@ html {
   height: 100%;
 }
 body {
+  text-align: center;
   margin: 0px;
   background: #7844B4;
   background: linear-gradient(to bottom right, #7844B4, #7844B4, #fc6a08);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup .popuptext {
+  visibility: hidden;
+  width: 640px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -320px;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 </style>
 </head>
-<p style="padding-top: 15px"><img style="display: block; margin-left: auto; margin-right: auto" src="pfp.jpg" alt="GillianMC's profile picture" width="250" height="250"></p>
-<p style="color: #fc6a08; text-align: center"><text style="font-weight: bold; font-size: 50px">GillianMC</text></p>
+<p style="padding-top: 15px"><img style="display: block; margin-left: auto; margin-right: auto" src="pfp.jpg" alt="GillianMC's profile picture" title="Gowther from The Seven Deadly Sins" width="250" height="250"></p>
+<div class="popup" onclick="commitpopup()" style="margin-top: -15px"><text class="text" style="font-size: 50px">GillianMC</text>
+  <span class="popuptext" id="myPopup"><text class="text" style="color: #c336e3">My nickname comes from the character Gillian from The Promised Neverland manga, whose appearances I then used as my <a style="text-decoration: underline; color: #fc6a08" href="https://discord.gg/jv5fBGxvEb">profile pictures</a>, and MC next to it, which in it's own place comes from my old nickname, SandeMC, which I came up with randomly when I was like, 6? lol</text></span>
+</div>
+<p style="margin-top: -5px"><text class="text" style="font-size: 15px; color: gray" title="Yes, like this">Hover on text to get more info</text>
+<p style="margin-top: -15px"><text id="age" class="text" style="font-size: 15px" title="Birthday: April 5th"/>
+<p style="margin-top: -15px"><text class="text" style="font-size: 15px" title="Cisgender, heterosexual, ally, pronouns: he/him">Male</text>
+<script>
+function commitpopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+var d1 = "5";
+var m1 = "4";
+var y1 = "2007";
+var date = new Date();
+var d2 = date.getDate();
+var m2 = 1 + date.getMonth();
+var y2 = date.getFullYear();
+var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+if(d1 > d2){
+  d2 = d2 + month[m2 - 1];
+    m2 = m2 - 1;
+}
+if(m1 > m2){
+  m2 = m2 + 12;
+    y2 = y2 - 1;
+}
+var d = d2 - d1;
+var m = m2 - m1;
+var y = y2 - y1;
+document.getElementById('age').innerHTML = 'Age: '+y+' years old';
+</script>
 </body>
 </html>

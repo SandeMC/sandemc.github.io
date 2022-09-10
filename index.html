@@ -136,11 +136,16 @@ function commitpopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
-var countDownDate = new Date("Apr 5, 2023 12:00:00").getTime();
+var countDownDate = new Date("April 5 2023 12:00:00").getTime();
 var now = new Date().getTime();
 var distance = countDownDate - now;
 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-document.getElementById("days").innerHTML = days + " days left until birthday" ;
+if (days > 30) {
+	var months = Math.round(days / 30);
+	if (months==1){document.getElementById("days").innerHTML = months + " month left until birthday";} 
+	else {document.getElementById("days").innerHTML = months + " months left until birthday";}
+}
+else {document.getElementById("days").innerHTML = days + " days left until birthday" ;}
 var d1 = "no";
 var m1 = "no";
 var y1 = "no";

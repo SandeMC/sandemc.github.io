@@ -18,8 +18,24 @@
   font-weight: bold;
   color: #fc6a08
 }
-.roundimg {
+.rounding {
   border-radius: 50%;
+}
+.telega {
+  --bg-normal: #229ED9;
+  --bg-hover: #0088CC;
+}
+.hltb {
+  --bg-normal: #000000;
+  --bg-hover: #0d0d0d;
+}
+.anilist {
+  --bg-normal: #0b1622;
+  --bg-hover: #151f2e;
+}
+.trakt {
+  --bg-normal: #ab221a;
+  --bg-hover: #882424;
 }
 html {
   height: 100%;
@@ -68,7 +84,7 @@ body {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
-.button-telega {
+.button {
   display: inline-block;
   padding: 15px 25px;
   width: 300px;
@@ -77,60 +93,38 @@ body {
   text-align: center;
   text-decoration: none;
   outline: none;
-  background-color: #229ED9;
+  background-color: var(--bg-normal);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   color: #FFFFFF
 }
 
-.button-hltb {
-  display: inline-block;
-  padding: 15px 25px;
-  width: 300px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  background-color: #000000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  color: #FFFFFF
-}
+.button:hover {background-color: var(--bg-hover)}
 
-.button-telega:hover {background-color: #176e97}
-.button-hltb:hover {background-color: #323232}
-
-.button-telega:active {
-  background-color: #176e97;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.button-hltb:active {
-  background-color: #323232;
-  box-shadow: 0 5px #666;
+.button:active {
+  background-color: var(--bg-hover);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
   transform: translateY(4px);
 }
 
 </style>
 </head>
-<p style="padding-top: 15px"><img class="roundimg" style="display: block; margin-left: auto; margin-right: auto" src="pfp.jpg" alt="GillianMC's profile picture" title="Gowther from The Seven Deadly Sins" width="250" height="250"></p>
-<div class="popup" onclick="commitpopup()" style="margin-top: -15px"><text class="text" style="font-size: 50px">GillianMC</text>
+<div style="padding-top: 15px"><img class="rounding" style="display: block; margin-left: auto; margin-right: auto" src="pfp.jpg" alt="GillianMC's profile picture" title="Gowther from The Seven Deadly Sins" width="250" height="250"></div>
+<div class="popup" onclick="commitpopup()" style="margin-top: -10px"><text class="text" style="font-size: 50px">GillianMC</text>
   <span class="popuptext" id="myPopup"><text class="text" style="color: #c336e3">My nickname comes from the character Gillian from The Promised Neverland manga, whose appearances I then used as my <a style="text-decoration: underline; color: #fc6a08" href="https://discord.gg/jv5fBGxvEb">profile pictures</a>, and MC next to it, which in it's own place comes from my old nickname, SandeMC, which I came up with randomly when I was like, 9? lol</text></span>
 </div>
-<p style="margin-top: -5px"><text class="text" style="font-size: 15px; color: gray" title="Yes, like this">Hover on text to get more info</text>
+<p style="margin-top: 0px"><text class="text" style="font-size: 15px; color: gray" title="Yes, like this">Hover on text to get more info</text></p>
 <!-- <p style="margin-top: -15px"><text id="age" class="text" style="font-size: 15px" title="Birthday: April 5th"/> -->
-<p style="margin-top: -15px"><text id="days" class="text" style="font-size: 15px" title="Birthday: April 5th"/>
-<p style="margin-top: -15px"><text class="text" style="font-size: 15px" title="Cisgender, ally, pronouns: he/him">Male</text>
-<p><text class="text" style="font-size: 25px"><img style="height: 1em" src="discord-small-logo.svg"</img> GillianMC#5849</text>
-<p style="margin-top: -5px"><a href="https://t.me/sandemc"><button class="button-telega"><img style="height: 1em" src="telegram-logo.png"</img> Telegram</button></a></p>
-<p style="margin-top: -5px"><a href="https://howlongtobeat.com/user?n=SandeMC"><button class="button-hltb"><img style="height: 1em" src="hltb-logo.png"</img> HowLongToBeat</button></a></p>
+<p style="margin-top: -15px"><text id="days" class="text" style="font-size: 15px" title="Birthday: April 5th"/></p>
+<p style="margin-top: -15px"><text class="text" style="font-size: 15px" title="Cisgender, ally, pronouns: he/him">Male</text></p>
+<p style="margin-top: -10px"><text class="text" style="font-size: 25px"><img style="height: 1em" src="discord-small-logo.svg"</img> GillianMC#5849</text></p>
+<div><a href="https://t.me/sandemc"><button class="telega button"><img style="height: 0.8em" src="telegram-logo.png"</img> Telegram</button></a></div>
+<div style="margin-top: 10px"><a href="https://howlongtobeat.com/user?n=SandeMC"><button class="hltb button"><img style="height: 0.8em; margin-right: 1px" src="hltb-logo.png"</img>owLongToBeat</button></a></div>
+<div style="margin-top: 10px"><a href="https://anilist.co/user/GillianMC/animelist"><button class="anilist button"><img style="height: 0.8em" src="anilist-logo.png"</img> AniList</button></a></div>
+<div style="margin-top: 10px"><a href="https://trakt.tv/users/gillianmc"><button class="trakt button"><img style="height: 0.8em" src="trakt-logo.png"</img> Trakt</button></a></div>
 <script>
 function commitpopup() {
   var popup = document.getElementById("myPopup");

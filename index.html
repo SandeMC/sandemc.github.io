@@ -1,133 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GillianMC's bio</title>
-<link rel="icon" type="image/x-icon" href="pfp.jpg">
-<meta content="GillianMC's bio" property="og:title" />
-<meta content="Mini website for GillianMC's bio, links, and more (someday)" property="og:description" />
-<meta content="https://sandemc.github.io/" property="og:url" />
-<meta content="pfp.jpg" property="og:image" />
-<meta content="#7844B4" data-react-helmet="true" name="theme-color" />
-<style>
-.font {
-  font-family: 'Lato', sans-serif;
-}
-.text {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  color: #fc6a08
-}
-.rounding {
-  border-radius: 50%;
-}
-.telega {
-  --bg-normal: #229ED9;
-  --bg-hover: #0088CC;
-}
-.hltb {
-  --bg-normal: #000000;
-  --bg-hover: #0d0d0d;
-}
-.anilist {
-  --bg-normal: #0b1622;
-  --bg-hover: #151f2e;
-}
-.trakt {
-  --bg-normal: #ab221a;
-  --bg-hover: #882424;
-}
-.steam {
-  --bg-normal: #2a475e;
-  --bg-hover: #1b2838;
-}
-html {
-  height: 100%;
-}
-body {
-  text-align: center;
-  margin: 0px;
-  background: #7844B4;
-  background: linear-gradient(to bottom right, #7844B4, #7844B4, #fc6a08);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.popup .popuptext {
-  visibility: hidden;
-  width: 640px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -320px;
-}
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  width: 300px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  background-color: var(--bg-normal);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  color: #FFFFFF
-}
-
-.button:hover {background-color: var(--bg-hover)}
-
-.button:active {
-  background-color: var(--bg-hover);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
-  transform: translateY(4px);
-}
-
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GillianMC's bio</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/pfp.jpg">
+  <meta content="GillianMC's bio" property="og:title" />
+  <meta content="Mini website for GillianMC's bio, links, and more (someday)" property="og:description" />
+  <meta content="https://sandemc.github.io/" property="og:url" />
+  <meta content="assets/img/pfp.jpg" property="og:image" />
+  <meta content="#7844B4" data-react-helmet="true" name="theme-color" />
 </head>
-<div style="padding-top: 15px"><img class="rounding" style="display: block; margin-left: auto; margin-right: auto" src="pfp.jpg" alt="GillianMC's profile picture" title="Gowther from The Seven Deadly Sins" width="250" height="250"></div>
-<div class="popup" onclick="commitpopup()" style="margin-top: -10px"><text class="text" style="font-size: 50px">GillianMC</text>
+<body>
+<div style="padding-top: 15px"><img class="rounding" style="display: block; margin-left: auto; margin-right: auto" src="assets/img/pfp.jpg" alt="GillianMC's profile picture" title="Gowther from The Seven Deadly Sins" width="250" height="250"></div>
+<div class="popup" onclick="commitpopup()" style="margin-top: 0px"><text class="text" style="font-size: 50px">GillianMC</text>
   <span class="popuptext" id="myPopup"><text class="text" style="color: #c336e3">My nickname comes from the character Gillian from The Promised Neverland manga, whose appearances I then used as my <a style="text-decoration: underline; color: #fc6a08" href="https://discord.gg/jv5fBGxvEb">profile pictures</a>, and MC next to it, which in it's own place comes from my old nickname, SandeMC, which I came up with randomly when I was like, 9? lol</text></span>
 </div>
 <p style="margin-top: 0px"><text class="text" style="font-size: 15px; color: gray" title="Yes, like this">Hover on text to get more info</text></p>
 <!-- <p style="margin-top: -15px"><text id="age" class="text" style="font-size: 15px" title="Birthday: April 5th"/> -->
 <p style="margin-top: -15px"><text id="days" class="text" style="font-size: 15px" title="Birthday: April 5th"/></p>
 <p style="margin-top: -15px"><text class="text" style="font-size: 15px" title="Cisgender, ally, pronouns: he/him">Male</text></p>
-<p style="margin-top: -10px"><text class="text" style="font-size: 25px"><img style="height: 1em" src="discord-small-logo.svg"</img> GillianMC#5849</text></p>
-<div><a href="https://t.me/sandemc"><button class="telega button"><img style="height: 0.8em" src="telegram-logo.png"</img> Telegram</button></a> <a href="https://howlongtobeat.com/user?n=SandeMC"><button class="hltb button"><img style="height: 0.8em; margin-right: 1px" src="hltb-logo.png"</img>owLongToBeat</button></a></div>
-<div style="margin-top: 10px"><a href="https://anilist.co/user/GillianMC/animelist"><button class="anilist button"><img style="height: 0.8em" src="anilist-logo.png"</img> AniList</button></a> <a href="https://trakt.tv/users/gillianmc"><button class="trakt button"><img style="height: 0.8em" src="trakt-logo.png"</img> Trakt</button></a></div>
-<div style="margin-top: 10px"><a href="https://steamcommunity.com/profiles/76561198857530309"><button class="steam button"><img style="height: 0.8em" src="steam-logo.svg"</img> Steam</button></a> <a href="https://steamdb.info/calculator/76561198857530309/?cc=ua"><button class="steam button"><img style="height: 0.8em" src="steamdb-logo.png"</img> SteamDB</button></a></div>
+<p style="margin-top: -10px"><text class="text" style="font-size: 25px"><img style="height: 0.8em" src="assets/img/discord-small-logo.svg"</img> GillianMC#5849</text></p>
+<div><a href="https://t.me/sandemc"><button class="telega button"><img style="height: 0.8em" src="assets/img/telegram-logo.png"</img> Telegram</button></a> <a href="https://howlongtobeat.com/user?n=SandeMC"><button class="hltb button"><img style="height: 0.8em; margin-right: 1px" src="assets/img/hltb-logo.png"</img>owLongToBeat</button></a></div>
+<div style="margin-top: 10px"><a href="https://anilist.co/user/GillianMC/animelist"><button class="anilist button"><img style="height: 0.8em" src="assets/img/anilist-logo.png"</img> AniList</button></a> <a href="https://trakt.tv/users/gillianmc"><button class="trakt button"><img style="height: 0.8em" src="assets/img/trakt-logo.png"</img> Trakt</button></a></div>
+<div style="margin-top: 10px"><a href="https://steamcommunity.com/profiles/76561198857530309"><button class="steam button"><img style="height: 0.8em" src="assets/img/steam-logo.svg"</img> Steam</button></a> <a href="https://steamdb.info/calculator/76561198857530309/?cc=ua"><button class="steam button"><img style="height: 0.8em" src="assets/img/steamdb-logo.png"</img> SteamDB</button></a></div>
+</body>
 <script>
 function commitpopup() {
   var popup = document.getElementById("myPopup");
@@ -143,26 +40,6 @@ if (days > 30) {
 	else {document.getElementById("days").innerHTML = months + " months left until birthday";}
 }
 else {document.getElementById("days").innerHTML = days + " days left until birthday" ;}
-var d1 = "no";
-var m1 = "no";
-var y1 = "no";
-var date = new Date();
-var d2 = date.getDate();
-var m2 = 1 + date.getMonth();
-var y2 = date.getFullYear();
-var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-if(d1 > d2){
-  d2 = d2 + month[m2 - 1];
-    m2 = m2 - 1;
-}
-if(m1 > m2){
-  m2 = m2 + 12;
-    y2 = y2 - 1;
-}
-var d = d2 - d1;
-var m = m2 - m1;
-var y = y2 - y1;
-document.getElementById('age').innerHTML = 'Age: '+y+' years old';
 </script>
 </body>
 </html>

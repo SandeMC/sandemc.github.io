@@ -109,8 +109,8 @@ body {
 }
 
 .list {
-  min-width: calc(50px + 5px);
-  max-width: calc(600px + 10px);
+  min-width: calc(100px + 5px);
+  max-width: calc(400px + 10px);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

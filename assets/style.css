@@ -87,7 +87,7 @@ body {
 .button {
   display: inline-block;
   padding: 15px 25px;
-  width: 300px;
+  min-width: 100px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -109,17 +109,13 @@ body {
 }
 
 .list {
-  min-width: calc(200px + 8px);
-  max-width: calc(608px + 8px);
+  min-width: calc(50px + 5px);
+  max-width: calc(600px + 10px);
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 8px;
   justify-content: center;
   align-items: center;
-  margin-top: -10px;
-  margin: -8px 0 0 0;
-  margin-right: -5px 0 0 0;
-  margin:auto;
+  margin: auto;
 }
 
 .list > * {

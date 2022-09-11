@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  text-align: center;
+  margin: 0px;
+  background: #7844B4;
+  background: linear-gradient(to bottom right, #7844B4, #7844B4, #fc6a08);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .font {
   font-family: 'Lato', sans-serif;
 }
@@ -6,14 +21,15 @@
   font-weight: bold;
   color: #fc6a08
 }
+
 .rounding {
   transition: 1s;
   border-radius: 50%;
 }
-
 .rounding:hover {
   border-radius: 20%;
 }
+
 .telega {
   --bg-normal: #229ED9;
   --bg-hover: #0088CC;
@@ -34,17 +50,7 @@
   --bg-normal: #2a475e;
   --bg-hover: #1b2838;
 }
-html {
-  height: 100%;
-}
-body {
-  text-align: center;
-  margin: 0px;
-  background: #7844B4;
-  background: linear-gradient(to bottom right, #7844B4, #7844B4, #fc6a08);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 .popup {
   position: relative;
   display: inline-block;
@@ -81,6 +87,7 @@ body {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -98,11 +105,20 @@ body {
   font-weight: bold;
   color: #FFFFFF
 }
-
 .button:hover {background-color: var(--bg-hover)}
-
 .button:active {
   background-color: var(--bg-hover);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
   transform: translateY(4px);
+}
+
+.list {
+  min-width: calc(200px + 8px);
+  max-width: calc(600px + 8px);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  justify-content: center;
+  display: inline-block;
+  margin-top: -10px;
 }

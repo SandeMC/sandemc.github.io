@@ -30,6 +30,9 @@
   <a href="https://steamcommunity.com/profiles/76561198857530309"><button class="steam button"><img style="height: 0.8em" src="assets/img/steam-logo.svg"</img> Steam</button></a>
   <a href="https://steamdb.info/calculator/76561198857530309/?cc=ua"><button class="steam button"><img style="height: 0.8em" src="assets/img/steamdb-logo.png"</img> SteamDB</button></a>
 </div>
+<p class="text" style="margin-top: 20px">You're one of the
+<div style="margin-top: -15px" class="text website-counter"></div>
+<p class="text" style="margin-top: 0px">visitors!</p>
 </body>
 
 <script>
@@ -47,5 +50,12 @@ if (days > 30) {
 	else {document.getElementById("days").innerHTML = months + " months left until birthday";}
 }
 else {document.getElementById("days").innerHTML = days + " days left until birthday" ;}
+
+var counterContainer = document.querySelector(".website-counter");
+var visitCount = localStorage.getItem("page_view");
+localStorage.setItem("page_view", 1);
+visitCount = Number(visitCount) + 1;
+localStorage.setItem("page_view", visitCount);
+counterContainer.innerHTML = visitCount;
 </script>
 </html>

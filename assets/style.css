@@ -27,23 +27,23 @@ body {
 
 .telega {
   --bg-normal: #229ED9;
-  --bg-hover: #0088CC;
+  --bg-hover: #0387C4;
 }
 .hltb {
   --bg-normal: #000000;
-  --bg-hover: #0d0d0d;
+  --bg-hover: #1A1A1A;
 }
 .anilist {
   --bg-normal: #0b1622;
-  --bg-hover: #151f2e;
+  --bg-hover: #011932;
 }
 .trakt {
   --bg-normal: #ab221a;
-  --bg-hover: #882424;
+  --bg-hover: #920901;
 }
 .steam {
   --bg-normal: #2a475e;
-  --bg-hover: #1b2838;
+  --bg-hover: #0F3757;
 }
 
 .popup {

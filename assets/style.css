@@ -1,6 +1,13 @@
 * {
   font-family: 'Lato', sans-serif;
 }
+
+@media (max-width: 620px) {
+	.hidden-mobile {
+		display: none;
+	}
+}
+
 html {
   height: 100%;
 }

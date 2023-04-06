@@ -2,6 +2,12 @@
   font-family: 'Lato', sans-serif;
 }
 
+@font-face{
+	font-family: forque;
+	src: url('./fonts/Forque.ttf');
+	font-display: swap
+}
+
 @media (max-width: 620px) {
 	.hidden-mobile {
 		display: none;
@@ -93,7 +99,7 @@ body {
   display: inline-block;
   padding: 15px 25px;
   min-width: 100px;
-  font-size: 24px;
+  font-size: 150%;
   cursor: pointer;
   text-align: center;
   text-decoration: none;

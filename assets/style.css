@@ -58,6 +58,10 @@ body {
   --bg-normal: #2a475e;
   --bg-hover: #0F3757;
 }
+.guide {
+  --bg-normal: #000000;
+  --bg-hover: #1A1A1A;
+}
 
 .popup {
   position: relative;

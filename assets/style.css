@@ -58,6 +58,11 @@ body {
   --bg-normal: #2a475e;
   --bg-hover: #0F3757;
 }
+.github {
+  --bg-normal: #24292e;
+  --bg-hover: #2b3137;
+}
+
 .guide {
   --bg-normal: #000000;
   --bg-hover: #1A1A1A;

@@ -1,43 +1,64 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Info toggles for all toggle elements
   const infoToggles = document.querySelectorAll('.info-toggle');
   
+  // Create tooltip elements for each toggle
+  infoToggles.forEach(toggle => {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'info-tooltip';
+    tooltip.textContent = toggle.dataset.info;
+    toggle.appendChild(tooltip);
+  });
+
   infoToggles.forEach(toggle => {
     toggle.addEventListener('click', function(event) {
-      // Prevent event from bubbling up
       event.stopPropagation();
       
-      // Close any open toggles
+      // Close any other active toggles
       infoToggles.forEach(item => {
-        if (item !== this) {
-          item.classList.remove('active');
-        }
+        if (item !== this) item.classList.remove('active', 'downwards');
       });
       
-      // Toggle current item
+      // Toggle active state
       this.classList.toggle('active');
+      
+      if (this.classList.contains('active')) {
+        const tooltip = this.querySelector('.info-tooltip');
+        // Force reflow so that tooltip dimensions are up to date
+        void tooltip.offsetWidth;
+        
+        const toggleRect = this.getBoundingClientRect();
+        const tooltipHeight = tooltip.offsetHeight;
+        const spaceAbove = toggleRect.top;
+        const spaceBelow = window.innerHeight - toggleRect.bottom;
+
+        // If there isn’t enough space above but enough below, display downwards
+        if (spaceAbove < tooltipHeight + 10 && spaceBelow >= tooltipHeight + 10) {
+          this.classList.add('downwards');
+        } else {
+          this.classList.remove('downwards');
+        }
+      }
     });
   });
   
-  // Close info when clicking elsewhere
+  // Close tooltips when clicking outside or pressing Escape
   document.addEventListener('click', function(event) {
     if (!event.target.closest('.info-toggle')) {
       infoToggles.forEach(item => {
-        item.classList.remove('active');
+        item.classList.remove('active', 'downwards');
       });
     }
   });
   
-  // Close tooltips with Escape key
   document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
       infoToggles.forEach(item => {
-        item.classList.remove('active');
+        item.classList.remove('active', 'downwards');
       });
     }
   });
   
-  // Make Discord status widget "pop" on hover
+  // Discord widget hover effect
   const discordLink = document.querySelector('.discord-link');
   if (discordLink) {
     discordLink.addEventListener('mouseenter', function() {
@@ -49,13 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Function to adjust for different screen sizes
+  // Adjust layout for different screen sizes
   function adjustForScreenSize() {
     const isMobile = window.innerWidth <= 768;
     const isSmallMobile = window.innerWidth <= 480;
-    
-    // Adjust bio boxes for mobile
-    const bioBoxes = document.querySelectorAll('.bio-box');
     
     // Adjust Discord widget for small screens
     const discordStatus = document.querySelector('.discord-status');
@@ -69,22 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Adjust buttons for mobile
+    // Adjust social buttons for mobile
     const buttons = document.querySelectorAll('.social-button');
-    if (isMobile) {
-      buttons.forEach(button => {
-        button.style.width = '100%';
-      });
-    } else {
-      buttons.forEach(button => {
-        button.style.width = 'auto';
-      });
-    }
+    buttons.forEach(button => {
+      button.style.width = isMobile ? '100%' : 'auto';
+    });
   }
   
-  // Run adjustments on load
   adjustForScreenSize();
-  
-  // Run adjustments on window resize
   window.addEventListener('resize', adjustForScreenSize);
 });

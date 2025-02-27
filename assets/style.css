@@ -137,6 +137,10 @@ body {
   transition: transform 0.3s, color 0.3s;
 }
 
+.profile-name:hover {
+  transform: scale(1.05);
+}
+
 .profile-name .info-toggle {
   border-bottom: none;
   cursor: pointer;

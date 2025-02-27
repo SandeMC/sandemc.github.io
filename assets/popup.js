@@ -31,10 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const spaceAbove = toggleRect.top;
         const spaceBelow = window.innerHeight - toggleRect.bottom;
 
-        // If there isn’t enough space above but enough below, display downwards
-        if (spaceAbove < tooltipHeight + 10 && spaceBelow >= tooltipHeight + 10) {
-          this.classList.add('downwards');
+        // Only apply downward positioning for elements with the "profile-image" class.
+        if (this.classList.contains('profile-image')) {
+          if (spaceAbove < tooltipHeight + 10 && spaceBelow >= tooltipHeight + 10) {
+            this.classList.add('downwards');
+          } else {
+            this.classList.remove('downwards');
+          }
         } else {
+          // For non-profile-image toggles, always show the tooltip above.
           this.classList.remove('downwards');
         }
       }
